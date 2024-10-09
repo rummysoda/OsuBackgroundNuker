@@ -19,3 +19,13 @@ Either download the latest release on the **Releases** tab, or:
 python3 main.py
 ```
 
+### Linux
+
+For now, opening the executable of the latest release with Wine *should* do the same job as on Windows (I have not tested it)
+
+## Current limitations
+
+- Does not delete videos (to do)
+- Does not support custom paths
+- Super ugly interface
+

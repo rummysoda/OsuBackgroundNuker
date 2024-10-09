@@ -1,38 +1,63 @@
 import os
-import time
+import tkinter as tk
+from tkinter import filedialog, messagebox
 
-CURRENT_USER = os.getlogin()
-PATH_TO_GAME = f"C:\\Users\\{CURRENT_USER}\\AppData\\Local\\osu!\\Songs" # Assumes that the osu folder is in the default installation location
-SONG_FOLDER_FILES = os.listdir(PATH_TO_GAME)
+from PIL import Image, ImageTk
 
-beatmaps = []
 
-def delete_all_beatmaps():
-    for file in SONG_FOLDER_FILES:
+def delete_all_beatmaps(path_to_game):
+    if not os.path.exists(path_to_game):
+        messagebox.showerror("Error", "Invalid path. Please check and try again.")
+        return
+
+    song_folder_files = os.listdir(path_to_game)
+    beatmaps = []
+
+    for file in song_folder_files:
         # Pushes all the song folders to the "beatmaps" list
-        if os.path.isdir(file):
+        if os.path.isdir(os.path.join(path_to_game, file)):
             beatmaps.append(file)
 
     for beatmap in beatmaps:
-        os.chdir(PATH_TO_GAME + f"\\{beatmap}")
-        file_list = os.listdir()
+        beatmap_path = os.path.join(path_to_game, beatmap)
+        file_list = os.listdir(beatmap_path)
         for file in file_list:
             # Checks for the file extensions and deletes the files accordingly
             if file.endswith(".jpg") or file.endswith(".png") or file.endswith(".jpeg") or file.endswith(".mp4"):
-                print(f"Deleting background for {beatmap}...")
-                os.remove(file)
-                print("Background deleted.")
+                os.remove(os.path.join(beatmap_path, file))
 
-    print("Deleted all map backgrounds!")
+    messagebox.showinfo("Success", "Deleted all map backgrounds!")
 
-confirm = input("Enter 'CONFIRM' to delete all of your beatmap backgrounds: ")
+def browse_folder():
+    folder_selected = filedialog.askdirectory()
+    path_entry.delete(0, tk.END)
+    path_entry.insert(0, folder_selected)
 
-if confirm == "CONFIRM":
-    delete_all_beatmaps()
-else:
-    print("Exiting...")
-    time.sleep(2)
+def start_deletion():
+    confirm = messagebox.askquestion("Confirm", "Are you sure you want to delete all of your beatmap backgrounds?")
+    if confirm == 'yes':
+        delete_all_beatmaps(path_entry.get())
+
+root = tk.Tk()
+root.title("Osu Background Nuker")
+root.geometry("300x300")
+
+background_image = Image.open("/Users/rachedhakkar/Desktop/untitled folder 2/OsuBackgroundNuker/aklss.jpg")  # Replace with the path to your image
+background_photo = ImageTk.PhotoImage(background_image)
+background_label = tk.Label(root, image=background_photo)
+background_label.place(relwidth=1, relheight=1)
 
 
-os.chdir(PATH_TO_GAME)
+path_label = tk.Label(root, text="Path to osu! Songs folder:", bg="black")
+path_label.pack(pady=10)
 
+path_entry = tk.Entry(root, width=50)
+path_entry.pack(pady=5)
+
+browse_button = tk.Button(root, text="Browse", command=browse_folder)
+browse_button.pack(pady=10)
+
+delete_button = tk.Button(root, text="Delete Beatmap Backgrounds", command=start_deletion, bg="white", fg="black")
+delete_button.pack(pady=20)
+
+root.mainloop()

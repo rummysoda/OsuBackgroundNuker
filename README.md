@@ -6,3 +6,26 @@ Python script that fetches all of the beatmaps in your Osu! song folder, then de
 
 The background images are directly deleted, not moved to the recycle bin.
 
+## How to run
+
+### Windows
+
+Either download the latest release on the **Releases** tab, or:
+
+- Download the latest [Python](https://www.python.org/downloads/) release
+- Clone this repository
+- Open either Powershell or CMD and write the following command:
+```
+python3 main.py
+```
+
+### Linux
+
+For now, opening the executable of the latest release with Wine *should* do the same job as on Windows (I have not tested it)
+
+## Current limitations
+
+- Does not delete videos (to do)
+- Does not support custom paths
+- Super ugly interface
+

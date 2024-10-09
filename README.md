@@ -25,7 +25,6 @@ For now, opening the executable of the latest release with Wine *should* do the 
 
 ## Current limitations
 
-- Does not delete videos (to do)
 - Does not support custom paths
 - Super ugly interface
 

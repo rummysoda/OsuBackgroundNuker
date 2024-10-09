@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bf542d3-5f9b-4326-9d85-5afeac405ec2" name="Changes" comment="cahnged image path">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-    </list>
+    <list default="true" id="5bf542d3-5f9b-4326-9d85-5afeac405ec2" name="Changes" comment="cahnged image path" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +55,7 @@
       <workItem from="1728511743299" duration="29000" />
       <workItem from="1728511782491" duration="129000" />
       <workItem from="1728512204508" duration="18000" />
-      <workItem from="1728513196548" duration="620000" />
+      <workItem from="1728513196548" duration="741000" />
     </task>
     <task id="LOCAL-00001" summary="added nuke background">
       <option name="closed" value="true" />
@@ -83,7 +81,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728511848711</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cahnged image path">
+      <option name="closed" value="true" />
+      <created>1728513823930</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728513823930</updated>
+    </task>
+    <task id="LOCAL-00005" summary="cahnged image path">
+      <option name="closed" value="true" />
+      <created>1728513840102</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728513840102</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

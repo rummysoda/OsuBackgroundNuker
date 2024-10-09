@@ -18,7 +18,7 @@ def delete_all_beatmaps():
         file_list = os.listdir()
         for file in file_list:
             # Checks for the file extensions and deletes the files accordingly
-            if file.endswith(".jpg") or file.endswith(".png") or file.endswith(".jpeg"):
+            if file.endswith(".jpg") or file.endswith(".png") or file.endswith(".jpeg") or file.endswith(".mp4"):
                 print(f"Deleting background for {beatmap}...")
                 os.remove(file)
                 print("Background deleted.")

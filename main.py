@@ -2,8 +2,12 @@ import os
 import time
 
 CURRENT_USER = os.getlogin()
-PATH_TO_GAME = f"C:\\Users\\{CURRENT_USER}\\AppData\\Local\\osu!\\Songs" # Assumes that the osu folder is in the default installation location
-SONG_FOLDER_FILES = os.listdir(PATH_TO_GAME)
+PATH_TO_GAME = input("Enter the full path to your osu! Songs folder (e.g., C:\\Users\\user\\AppData\\Local\\osu!\\Songs): ")
+
+# Ensure the entered path exists
+if not os.path.exists(PATH_TO_GAME):
+    print("Invalid path. Please check and try again.")
+    exit()SONG_FOLDER_FILES = os.listdir(PATH_TO_GAME)
 
 beatmaps = []
 

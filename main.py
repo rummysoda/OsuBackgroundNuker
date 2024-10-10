@@ -2,7 +2,7 @@ import os
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
-from PIL import Image, ImageTk
+
 
 
 def delete_all_beatmaps(path_to_game):
@@ -42,9 +42,8 @@ root = tk.Tk()
 root.title("Osu Background Nuker")
 root.geometry("300x300")
 
-background_image = Image.open("aklss.jpg")  # Replace with the path to your image
-background_photo = ImageTk.PhotoImage(background_image)
-background_label = tk.Label(root, image=background_photo)
+background_image = tk.PhotoImage(file="background.png")
+background_label = tk.Label(root, image=background_image)
 background_label.place(relwidth=1, relheight=1)
 
 

@@ -10,7 +10,7 @@ The background images are directly deleted, not moved to the recycle bin.
 
 ### Windows
 
-- download the latest release as a zip file or click this link for [now] (https://github.com/rummysoda/OsuBackgroundNuker/archive/refs/heads/master.zip) 
+- download the latest release as a zip file or click this link for [now](https://github.com/rummysoda/OsuBackgroundNuker/archive/refs/heads/master.zip) 
 - Download the latest [Python](https://www.python.org/downloads/) release
 - open main.exe
 

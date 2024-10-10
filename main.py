@@ -45,9 +45,10 @@ root.geometry("300x300")
 background_image = tk.PhotoImage(file="background.png")
 background_label = tk.Label(root, image=background_image)
 background_label.place(relwidth=1, relheight=1)
+root.resizable(False, False)
 
 
-path_label = tk.Label(root, text="Path to osu! Songs folder:", bg="black")
+path_label = tk.Label(root, text="Path to osu! Songs folder:", bg="white", fg="black")
 path_label.pack(pady=10)
 
 path_entry = tk.Entry(root, width=50)

@@ -10,11 +10,11 @@ The background images are directly deleted, not moved to the recycle bin.
 
 ### Windows
 
-Either download the latest release on the **Releases** tab, or:
+Either download the latest release on the [Releases](https://github.com/AmineLeCepe/OsuBackgroundNuker/releases) tab, or:
 
 - Download the latest [Python](https://www.python.org/downloads/) release
-- Clone this repository
-- Open either Powershell or CMD and write the following command:
+- Clone this repository (using git or by downloading the source code)
+- Open either Powershell or CMD and write the following command inside of the source code directory:
 ```
 python3 main.py
 ```
@@ -25,7 +25,6 @@ For now, opening the executable of the latest release with Wine *should* do the 
 
 ## Current limitations
 
-- Does not delete videos (to do)
 - Does not support custom paths
 - Super ugly interface
 

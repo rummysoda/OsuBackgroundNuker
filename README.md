@@ -43,8 +43,3 @@ python main.py
     python main.py --path <Path to your osu! song folder>
     ```
     
-## Current limitations
-
-- Does not support custom paths
-- Super ugly interface
-

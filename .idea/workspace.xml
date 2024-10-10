@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bf542d3-5f9b-4326-9d85-5afeac405ec2" name="Changes" comment="window not resizeable and fixed text color" />
+    <list default="true" id="5bf542d3-5f9b-4326-9d85-5afeac405ec2" name="Changes" comment="window not resizeable and fixed text color">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +61,7 @@
       <workItem from="1728513196548" duration="741000" />
       <workItem from="1728514290355" duration="378000" />
       <workItem from="1728517090809" duration="119000" />
-      <workItem from="1728593304570" duration="1556000" />
+      <workItem from="1728593304570" duration="2457000" />
     </task>
     <task id="LOCAL-00001" summary="added nuke background">
       <option name="closed" value="true" />

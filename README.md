@@ -10,21 +10,12 @@ The background images are directly deleted, not moved to the recycle bin.
 
 ### Windows
 
-Either download the latest release on the [Releases](https://github.com/AmineLeCepe/OsuBackgroundNuker/releases) tab, or:
-
+- download the latest release as a zip file or click this link for [now] (https://github.com/rummysoda/OsuBackgroundNuker/archive/refs/heads/master.zip) 
 - Download the latest [Python](https://www.python.org/downloads/) release
-- Clone this repository (using git or by downloading the source code)
-- Open either Powershell or CMD and write the following command inside of the source code directory:
-```
-python3 main.py
-```
+- open main.exe
 
-### Linux
+ also this work was forked from [amine's osu background nuker](https://github.com/AmineLeCepe/OsuBackgroundNuker).
+I just added an interface and made it an executable.
+also you can choose your own path  
 
-For now, opening the executable of the latest release with Wine *should* do the same job as on Windows (I have not tested it)
-
-## Current limitations
-
-- Does not support custom paths
-- Super ugly interface
-
+ 

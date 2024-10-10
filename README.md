@@ -33,7 +33,6 @@ python3 main.py
 
 - Download **Python** and **Git** (Check your distro's documentation on how to do it)
 - Enter the following commands:
-- 
 ```
 git clone https://github.com/AmineLeCepe/OsuBackgroundNuker/
 cd OsuBackgroundNuker

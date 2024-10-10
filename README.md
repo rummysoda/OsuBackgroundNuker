@@ -18,11 +18,32 @@ Either download the latest release on the [Releases](https://github.com/AmineLeC
 ```
 python3 main.py
 ```
+  - If you wish to specify a custom song folder, use the **--path** flag either:
+    ```
+    python3 main.py --path <Path to your osu! song folder>
+    ```
+    or this way:
+    ```
+    OsuBackgroundNuker.exe --path <Path to your osu! song folder>
+    ```
+    depending on your installation method.
+    Passing an invalid directory will result in a crash and will not delete anything.
 
 ### Linux
 
-For now, opening the executable of the latest release with Wine *should* do the same job as on Windows (I have not tested it)
-
+- Download **Python** and **Git** (Check your distro's documentation on how to do it)
+- Enter the following commands:
+- 
+```
+git clone https://github.com/AmineLeCepe/OsuBackgroundNuker/
+cd OsuBackgroundNuker
+python main.py
+```
+  - If you wish to specify a custom song folder, use the **--path** flag:
+    ```
+    python main.py --path <Path to your osu! song folder>
+    ```
+    
 ## Current limitations
 
 - Does not support custom paths

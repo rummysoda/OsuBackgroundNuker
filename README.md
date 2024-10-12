@@ -12,7 +12,7 @@ The background images are directly deleted, not moved to the recycle bin.
 
 Either download the latest release on the [Releases](https://github.com/AmineLeCepe/OsuBackgroundNuker/releases) tab, or:
 
-- Download the latest [Python](https://www.python.org/downloads/) release
+- Download and install the latest [Python](https://www.python.org/downloads/) release
 - Clone this repository (using git or by downloading the source code)
 - Open either Powershell or CMD and write the following command inside of the source code directory:
   

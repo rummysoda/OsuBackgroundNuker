@@ -44,3 +44,4 @@ coll = COLLECT(
     name='main',
     distpath='dist'
 )
+

@@ -1,57 +1,80 @@
 import os
-import time
-import typer
-import rich
+import tkinter as tk
+from tkinter import filedialog, messagebox
+import sys
 
-CURRENT_USER = os.getlogin()
-PATH_TO_GAME = f"C:\\Users\\{CURRENT_USER}\\AppData\\Local\\osu!\\Songs" # Assumes that the osu folder is in the default installation location
+def resource_path(relative_path):
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.abspath(".")
 
-def nuke(path): # Function that deletes all the beatmap backgrounds in the specified song folder
+    return os.path.join(base_path, relative_path)
+
+
+def delete_all_beatmaps(path_to_game):
+    if not os.path.exists(path_to_game):
+        messagebox.showerror("Error", "Invalid path. Please check and try again.")
+        return
+    normalized_path = os.path.normpath(path_to_game)
+    components = normalized_path.split(os.sep)
+
+    if not (len(components) >= 2 and components[-2].lower() == 'osu!' and components[-1].lower() == 'songs'):
+        messagebox.showerror("Error",
+                             "The selected folder is not a valid osu! Songs folder. Please select the correct folder.")
+        return
+
+    song_folder_files = os.listdir(path_to_game)
     beatmaps = []
-    deletion_counter = 0 # Keeps track of the number of deleted maps
 
-    os.chdir(path) # Changes directory to the specified path (or default path if no CLI argument has been passed)
 
-    song_folder_files = os.listdir(path)
+
     for file in song_folder_files:
         # Pushes all the song folders to the "beatmaps" list
-        if os.path.isdir(file):
+        if os.path.isdir(os.path.join(path_to_game, file)):
             beatmaps.append(file)
 
     for beatmap in beatmaps:
-        os.chdir(path + f"\\{beatmap}")
-        file_list = os.listdir()
+        beatmap_path = os.path.join(path_to_game, beatmap)
+        file_list = os.listdir(beatmap_path)
         for file in file_list:
             # Checks for the file extensions and deletes the files accordingly
             if file.endswith(".jpg") or file.endswith(".png") or file.endswith(".jpeg") or file.endswith(".mp4"):
-                print(f"Deleting background for {beatmap}...")
-                os.remove(file)
-                deletion_counter += 1
-                print("Background deleted.")
+                os.remove(os.path.join(beatmap_path, file))
 
-    rich.print("\n\n[bold green]Deleted all map backgrounds![/bold green]\n")
-    rich.print(f"[green]Total deleted backgrounds: {deletion_counter}[/green]")
+    messagebox.showinfo("Success", "Deleted all map backgrounds!")
 
-def main(path: str = PATH_TO_GAME): # Main function
-    rich.print(f"[blue]Target folder: {path}\n[/blue]")
+def browse_folder():
+    folder_selected = filedialog.askdirectory()
+    path_entry.delete(0, tk.END)
+    path_entry.insert(0, folder_selected)
 
-    if not os.path.isdir(path): # Throws an error if the path is invalid
-        rich.print(f"[bold red]{path} is not a valid folder. Exiting...[/bold red]")
-        raise typer.Exit()
+def start_deletion():
+    confirm = messagebox.askquestion("Confirm", "Are you sure you want to delete all of your beatmap backgrounds?")
+    if confirm == 'yes':
+        delete_all_beatmaps(path_entry.get())
 
-    rich.print("Enter [bold green]'CONFIRM'[/bold green] to delete all of your beatmap backgrounds: ")
-    confirm = input()
+root = tk.Tk()
+root.title("Osu Background Nuker")
+root.geometry("300x300")
 
-    if confirm == "CONFIRM":
-            nuke(path)
-
-    else:
-        rich.print("[bold red]Exiting...[/bold red]")
-        raise typer.Exit()
-
-if __name__ == "__main__":
-    typer.run(main)
+background_image = tk.PhotoImage(file=resource_path("background.png"))
+background_label = tk.Label(root, image=background_image)
+background_label.place(relwidth=1, relheight=1)
+root.resizable(False, False)
 
 
+path_label = tk.Label(root, text="Path to osu! Songs folder:", bg="white", fg="black")
+path_label.pack(pady=10)
 
+path_entry = tk.Entry(root, width=50)
+path_entry.pack(pady=5)
 
+browse_button = tk.Button(root, text="Browse", command=browse_folder)
+browse_button.pack(pady=10)
+
+delete_button = tk.Button(root, text="Delete Beatmap Backgrounds", command=start_deletion, bg="white", fg="black")
+delete_button.pack(pady=20)
+
+root.mainloop()

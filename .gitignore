@@ -242,3 +242,8 @@ fabric.properties
 build
 dist
 .idea
+/build
+/dist
+/.idea
+.DS_Store
+.gitattributes

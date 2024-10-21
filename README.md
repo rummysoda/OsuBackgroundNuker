@@ -5,7 +5,7 @@ the app osu! Background Nuker helps you manage and remove background images from
 ## Download and Setup
 
 1. **Download the Latest Release**:
-   - Head over to the [Releases page](https://github.com/rummysoda/osu-BackgroundNuker/releases/tag/main) and download the file named `main-sfx.exe` from the latest release.
+   - Head over to the [Releases page](https://github.com/rummysoda/OsuBackgroundNuker/releases/tag/master) and download the file named `main-sfx.exe` from the latest release.
   
 
 2. **Run the Self-Extracting EXE**:

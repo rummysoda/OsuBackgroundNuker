@@ -1,8 +1,6 @@
-build
-dist
-.idea
+/.idea
 /build
 /dist
 /.idea
-.DS_Store
-.gitattributes
+/.DS_Store
+/.gitattributes
